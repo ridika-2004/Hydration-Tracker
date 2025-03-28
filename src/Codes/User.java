@@ -6,14 +6,14 @@ public class User {
     private LocalTime wakeTime, sleepTime, lastWaterTaken;
     private double waterGoal, currentIntake;
 
-    public User(String name, String email, LocalTime wakeTime, LocalTime sleepTime, double waterGoal) {
+    public User(String name, String email, LocalTime wakeTime, LocalTime sleepTime, double waterGoal, double currentIntake, LocalTime lastwatertakentime) {
         this.name = name;
         this.email = email;
         this.wakeTime = wakeTime;
         this.sleepTime = sleepTime;
         this.waterGoal = waterGoal;
-        this.currentIntake = 0.0;
-        this.lastWaterTaken = wakeTime;
+        this.currentIntake = currentIntake;
+        this.lastWaterTaken = lastwatertakentime;
     }
     public String getName() {
         return name;

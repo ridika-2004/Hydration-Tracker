@@ -1,18 +1,25 @@
 package Codes;
 import java.io.*;
+import java.time.LocalDate;
+
 import Utils.*;
 
 public class FileManager {
     public static void addStats(String filepath, User user) {
         try (FileWriter writer = new FileWriter(filepath, true)) {
-            String data = String.join("|", user.getName(),user.getEmail(),TrackerUtils.formatTimeToString(user.getWakeTime()),
-                            TrackerUtils.formatTimeToString(user.getSleepTime()),String.format("%.2f",user.getWaterGoal()),
-                            String.format("%.2f",user.getCurrentIntake()),TrackerUtils.formatTimeToString(user.getLastWaterTaken()));
-            writer.write(data);
+            String data = String.join("|", user.getName(),user.getEmail(),TrackerUtils.formatDateToString(LocalDate.now()),
+                            TrackerUtils.formatTimeToString(user.getWakeTime()),TrackerUtils.formatTimeToString(user.getSleepTime()),
+                            String.format("%.2f",user.getWaterGoal()),String.format("%.2f",user.getCurrentIntake()),
+                            TrackerUtils.formatTimeToString(user.getLastWaterTaken()));
+            writer.write(data+"\n");
             // System.out.println("Stats saved successfully.");
         } catch (IOException e) {
             // System.out.println("Error saving stats: " + e.getMessage());
         }
+    }
+
+    public static void updateStats(){
+        //
     }
 
     public static void saveStats( String filepath ,String details) {
