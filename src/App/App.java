@@ -8,9 +8,7 @@ import Utils.TrackerUtils;
 
 public class App {
     public static void main(String[] args) {
-        // new UserInteraction().userDashboard();
-        LocalDate todaydate = TrackerUtils.formatStringToDate("28/03/25");
-        System.out.println(!todaydate.equals(LocalDate.now()));
+        new UserInteraction().userDashboard();
         // System.out.println(
         // "                                                            ╔═════════════════════════════════════╗\n" +
         // "                                                            ║           CHOOSE YOUR ROLE          ║\n" +

@@ -46,7 +46,18 @@ public class TrackerUtils {
     public static String formatDateToString(LocalDate date) {
         return date.format(DateTimeFormatter.ofPattern("dd/MM/yy"));
     }
-    
+
+    public static double takeValidDoubleInput(String prompt) {
+        while (true) {
+            System.out.print(prompt);
+            try {
+                double input = Double.parseDouble(scanner.nextLine().trim());
+                return input;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+    }
 
     public static void clearTerminal() {
         try {

@@ -15,8 +15,6 @@ public class User {
         this.currentIntake = 0.0;
         this.lastWaterTaken = wakeTime;
     }
-
-    // Getters and setters
     public String getName() {
         return name;
     }
