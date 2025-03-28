@@ -8,15 +8,22 @@ import Utils.TrackerUtils;
 
 public class App {
     public static void main(String[] args) {
-        new UserInteraction().userDashboard();
+        // new UserInteraction().userDashboard();
         // System.out.println(
-        // "                                                            ╔═════════════════════════════════════╗\n" +
-        // "                                                            ║           CHOOSE YOUR ROLE          ║\n" +
-        // "                                                            ╠═════════════════════════════════════╣\n" +
-        // "                                                            ║          [1] Regular User           ║\n" +
-        // "                                                            ║          [2] Organizer              ║\n" +
-        // "                                                            ║          [3] Exit                   ║\n" +
-        // "                                                            ╚═════════════════════════════════════╝");
+        //     "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+        //     "                                                            █                                      █\n" +
+        //     "                                                            █           CHOOSE YOUR ROLE           █\n" +
+        //     "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
+        //     "                                                            █                                      █\n" +
+        //     "                                                            █          [1] Regular User            █\n" +
+        //     "                                                            █          [2] Organizer               █\n" +
+        //     "                                                            █          [3] Exit                    █\n" +
+        //     "                                                            █                                      █\n" +
+        //     "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
+        //     "                                                            ");
+        
+        
+        
 
         // System.out.println("████████████████████████\r\n" + //
         //                 "█    CHOOSE OPTION    █\r\n" + //
@@ -26,5 +33,7 @@ public class App {
         //                 "█  [3] Exit          █\r\n" + //
         //                 "████████████████████████\r\n" + //
         //                 "");
+
+        System.out.println("▄\n");
     }
 }
