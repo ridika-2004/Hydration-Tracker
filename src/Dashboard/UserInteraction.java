@@ -27,10 +27,11 @@ public class UserInteraction {
 
             User user = new User(name, email, waketime, sleeptime, dailygoal, currentIntake, lastwatertaken);
 
-            Tracker tracker = new Tracker(filepath,user);
+            
             // tracker.trackWater();
-            Reminder reminder = new Reminder(tracker);
-            reminder.startReminders();
+            Reminder reminder = new Reminder();
+            Tracker tracker = new Tracker(filepath,user);
+            reminder.startReminders(tracker.needsReminder());
             MyGeneralUtils.sleep();
 
             System.out.println("done");
@@ -50,10 +51,10 @@ public class UserInteraction {
         User user = new User(name, email, MyGeneralUtils.formatStringToTime(wakeTime), MyGeneralUtils.formatStringToTime(sleepTime), dailygoal, 0.0, MyGeneralUtils.formatStringToTime(wakeTime));
         FileManager.addStats(filepath, user);
 
+        Reminder reminder = new Reminder();
         Tracker tracker = new Tracker(filepath,user);
         // tracker.trackWater();
-        Reminder reminder = new Reminder(tracker);
-        reminder.startReminders();
+        reminder.startReminders(tracker.needsReminder());
     }
 
     private boolean userExists(String email){
