@@ -18,8 +18,10 @@ public class FileManager {
         }
     }
 
-    public static void updateStats(){
-        //
+    public static void updateStats(String filepath, User user){
+        String userline = FileUtils.searchFromFile(filepath, user.getEmail());
+        FileUtils.deleteLineFromFile(filepath, userline);
+        addStats(filepath, user);
     }
 
     public static void saveStats( String filepath ,String details) {
