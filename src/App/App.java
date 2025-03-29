@@ -2,13 +2,16 @@ package App;
 
 import java.time.LocalDate;
 
+import About.About;
 import Codes.Tracker;
 import Dashboard.UserInteraction;
 import Utils.*;
 
 public class App {
     public static void main(String[] args) {
-        new UserInteraction().userDashboard();
+        About about = new About();
+        about.printGuide();
+        // new UserInteraction().userDashboard();
         System.exit(0);
         // final String BLUE_TEXT = "\u001B[36m";  // Cyan text
         // final String RESET = "\u001B[0m";      // Reset color
