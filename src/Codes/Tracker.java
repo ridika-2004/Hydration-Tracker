@@ -3,7 +3,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalTime;
 
-import Utils.TrackerUtils;
+import Utils.*;
 
 public class Tracker {
     private User user;
@@ -22,7 +22,7 @@ public class Tracker {
         System.out.println("5. view water needs for people");
         System.out.println("6. about this app");
 
-        double watertakenamount = TrackerUtils.takeValidDoubleInput("Enter the amount you drank : ");
+        double watertakenamount = MyGeneralUtils.takeValidDoubleInput("Enter the amount you drank : ");
 
         addWater(watertakenamount, LocalTime.now());
     }

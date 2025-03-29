@@ -7,10 +7,10 @@ import Utils.*;
 public class FileManager {
     public static void addStats(String filepath, User user) {
         try (FileWriter writer = new FileWriter(filepath, true)) {
-            String data = String.join("|", user.getName(),user.getEmail(),TrackerUtils.formatDateToString(LocalDate.now()),
-                            TrackerUtils.formatTimeToString(user.getWakeTime()),TrackerUtils.formatTimeToString(user.getSleepTime()),
+            String data = String.join("|", user.getName(),user.getEmail(),MyGeneralUtils.formatDateToString(LocalDate.now()),
+                            MyGeneralUtils.formatTimeToString(user.getWakeTime()),MyGeneralUtils.formatTimeToString(user.getSleepTime()),
                             String.format("%.2f",user.getWaterGoal()),String.format("%.2f",user.getCurrentIntake()),
-                            TrackerUtils.formatTimeToString(user.getLastWaterTaken()));
+                            MyGeneralUtils.formatTimeToString(user.getLastWaterTaken()));
             writer.write(data+"\n");
             // System.out.println("Stats saved successfully.");
         } catch (IOException e) {
@@ -19,8 +19,8 @@ public class FileManager {
     }
 
     public static void updateStats(String filepath, User user){
-        String userline = FileUtils.searchFromFile(filepath, user.getEmail());
-        FileUtils.deleteLineFromFile(filepath, userline);
+        String userline = MyFileUtils.searchFromFile(filepath, user.getEmail());
+        MyFileUtils.deleteLineFromFile(filepath, userline);
         addStats(filepath, user);
     }
 

@@ -4,7 +4,8 @@ import java.time.*;
 import java.time.format.*;
 import java.util.*;
 
-public class TrackerUtils {
+public class MyGeneralUtils {
+    
     private static final Scanner scanner =  new Scanner(System.in);
 
     public static String takeInput(String prompt) {

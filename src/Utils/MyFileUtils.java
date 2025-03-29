@@ -2,7 +2,7 @@ package Utils;
 import java.io.*;
 import java.util.*;
 
-public class FileUtils {
+public class MyFileUtils {
 
     public static final int userNameIndex = 0;
     public static final int emailIndex = 1;
