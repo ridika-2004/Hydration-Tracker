@@ -7,6 +7,7 @@ import Utils.*;
 public class Tracker {
     private User user;
     private String filepath;
+    final int reminder_threshold_minute = 120;
 
     public Tracker(String filepath, User user) {
         this.filepath = filepath;
@@ -39,6 +40,6 @@ public class Tracker {
     public boolean needsReminder() {
         LocalTime lastWatertakenTime = user.getLastWaterTaken();
         Duration hasntTakenWaterSince = Duration.between(lastWatertakenTime, LocalTime.now());
-        return hasntTakenWaterSince.toMinutes() > 120;
+        return hasntTakenWaterSince.toMinutes() > reminder_threshold_minute;
     }
 }

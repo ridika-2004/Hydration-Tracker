@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 import Codes.FileManager;
+import Codes.Reminder;
 import Codes.Tracker;
 import Codes.User;
 import Utils.*;
@@ -27,7 +28,9 @@ public class UserInteraction {
             User user = new User(name, email, waketime, sleeptime, dailygoal, currentIntake, lastwatertaken);
 
             Tracker tracker = new Tracker(filepath,user);
-            tracker.trackWater();
+            // tracker.trackWater();
+            Reminder reminder = new Reminder(tracker);
+            reminder.startReminders();
 
             // System.out.println("Do you want to add water? ");
             // System.out.println(user.getLastWaterTaken());
@@ -45,7 +48,9 @@ public class UserInteraction {
         FileManager.addStats(filepath, user);
 
         Tracker tracker = new Tracker(filepath,user);
-        tracker.trackWater();
+        // tracker.trackWater();
+        Reminder reminder = new Reminder(tracker);
+        reminder.startReminders();
     }
 
     private boolean userExists(String email){

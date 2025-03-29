@@ -2,6 +2,7 @@ package App;
 
 import java.time.LocalDate;
 
+import Codes.Tracker;
 import Dashboard.UserInteraction;
 import Utils.*;
 
@@ -33,18 +34,18 @@ public class App {
         // }
         // System.out.println();
 
-        System.out.println(
-            "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
-            "                                                            █                                      █\n" +
-            "                                                            █           CHOOSE YOUR ROLE           █\n" +
-            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
-            "                                                            █                                      █\n" +
-            "                                                            █          [1] Regular User            █\n" +
-            "                                                            █          [2] Organizer               █\n" +
-            "                                                            █          [3] Exit                    █\n" +
-            "                                                            █                                      █\n" +
-            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
-            "                                                            ");
+        // System.out.println(
+        //     "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+        //     "                                                            █                                      █\n" +
+        //     "                                                            █           CHOOSE YOUR ROLE           █\n" +
+        //     "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
+        //     "                                                            █                                      █\n" +
+        //     "                                                            █          [1] Regular User            █\n" +
+        //     "                                                            █          [2] Organizer               █\n" +
+        //     "                                                            █          [3] Exit                    █\n" +
+        //     "                                                            █                                      █\n" +
+        //     "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
+        //     "                                                            ");
         
         
         
