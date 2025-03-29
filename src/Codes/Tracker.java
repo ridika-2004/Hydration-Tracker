@@ -6,12 +6,15 @@ import Utils.*;
 
 public class Tracker {
     private User user;
-    private String filepath;
+    private String waterstatsfile, feedbackfile;
+    private FileManager fileManager;
     final int reminder_threshold_minute = 120;
 
-    public Tracker(String filepath, User user) {
-        this.filepath = filepath;
+    public Tracker(String waterstatsfile, String feedbackfile, User user) {
+        this.waterstatsfile = waterstatsfile;
+        this.feedbackfile = feedbackfile;
         this.user = user;
+        fileManager = new FileManager(waterstatsfile, feedbackfile);
     }
 
     public void trackWater(){
@@ -30,7 +33,7 @@ public class Tracker {
     public void addWater(double amount, LocalTime time) {
         user.addWater(amount, time);
         System.out.println("Added " + amount + "ml. Total intake: " + user.getCurrentIntake() + "ml.");
-        FileManager.updateStats(filepath, user);
+        fileManager.updateStats(user);
     }
 
     public boolean hasMetGoal() {

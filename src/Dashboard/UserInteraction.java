@@ -11,13 +11,16 @@ import Utils.*;
 
 public class UserInteraction {
 
-    private static final String filepath = "src/Txt_Files/water_stats.txt";
+    private static final String waterStatsFile = "src/Txt_Files/water_stats.txt";
+    private static final String feedbackFile = "src/Txt_Files/feedback.txt";
+
+    FileManager fileManager = new FileManager(waterStatsFile, feedbackFile);
     public void userDashboard(){
         String name = MyGeneralUtils.takeInput("Enter your name : ");
         String email = MyGeneralUtils.takeInput("Enter your email : ");
 
         if(userExists(email)){
-            String userresult = MyFileUtils.searchFromFile(filepath, email);
+            String userresult = MyFileUtils.searchFromFile(waterStatsFile, email);
             String[] parts = userresult.split("\\|");
             LocalTime waketime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.wakeTimeIndex]);
             LocalTime sleeptime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.sleepTimeIndex]);
@@ -30,7 +33,7 @@ public class UserInteraction {
             
             // tracker.trackWater();
             Reminder reminder = new Reminder();
-            Tracker tracker = new Tracker(filepath,user);
+            Tracker tracker = new Tracker(waterStatsFile,feedbackFile,user);
             reminder.startReminders(tracker.needsReminder());
             MyGeneralUtils.sleep();
 
@@ -49,16 +52,16 @@ public class UserInteraction {
         double dailygoal = MyGeneralUtils.takeValidDoubleInput("Enter daily goal : ");
 
         User user = new User(name, email, MyGeneralUtils.formatStringToTime(wakeTime), MyGeneralUtils.formatStringToTime(sleepTime), dailygoal, 0.0, MyGeneralUtils.formatStringToTime(wakeTime));
-        FileManager.addStats(filepath, user);
+        fileManager.addUserStats(user);
 
         Reminder reminder = new Reminder();
-        Tracker tracker = new Tracker(filepath,user);
+        Tracker tracker = new Tracker(waterStatsFile,feedbackFile,user);
         // tracker.trackWater();
         reminder.startReminders(tracker.needsReminder());
     }
 
     private boolean userExists(String email){
-        String userresult = MyFileUtils.searchFromFile(filepath, email);
+        String userresult = MyFileUtils.searchFromFile(waterStatsFile, email);
         // System.out.println(userresult);
 
         if(userresult==null){
