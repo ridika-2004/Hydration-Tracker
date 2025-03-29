@@ -18,18 +18,21 @@ public class MyGeneralUtils {
         }
     }
 
+    public static void sleep(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            // Thread.currentThread().interrupt();
+            // System.out.println("Sleep interrupted: " + e.getMessage());
+        }
+    }
+
     public static String linesToString(List<String> lines){
         String output = "";
         for(String line : lines){
             output+=line+"\n";
         }
         return output;
-    }
-
-    public static void sleep(){
-        try {
-            Thread.sleep(800);
-        } catch (InterruptedException e) {}
     }
 
     public static LocalTime formatStringToTime(String time) {

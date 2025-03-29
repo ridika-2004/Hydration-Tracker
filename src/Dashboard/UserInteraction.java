@@ -31,13 +31,7 @@ public class UserInteraction {
             // tracker.trackWater();
             Reminder reminder = new Reminder(tracker);
             reminder.startReminders();
-
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                System.out.println("Sleep interrupted: " + e.getMessage());
-            }
+            MyGeneralUtils.sleep();
 
             System.out.println("done");
 
