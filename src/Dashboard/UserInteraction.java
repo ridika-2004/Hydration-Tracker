@@ -32,6 +32,15 @@ public class UserInteraction {
             Reminder reminder = new Reminder(tracker);
             reminder.startReminders();
 
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.println("Sleep interrupted: " + e.getMessage());
+            }
+
+            System.out.println("done");
+
             // System.out.println("Do you want to add water? ");
             // System.out.println(user.getLastWaterTaken());
         } else {

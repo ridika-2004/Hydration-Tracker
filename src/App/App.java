@@ -9,6 +9,7 @@ import Utils.*;
 public class App {
     public static void main(String[] args) {
         new UserInteraction().userDashboard();
+        System.exit(0);
         // final String BLUE_TEXT = "\u001B[36m";  // Cyan text
         // final String RESET = "\u001B[0m";      // Reset color
 
