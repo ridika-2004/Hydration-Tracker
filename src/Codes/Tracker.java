@@ -1,6 +1,5 @@
 package Codes;
 import java.time.Duration;
-import java.time.Instant;
 import java.time.LocalTime;
 
 import Utils.*;
@@ -38,7 +37,8 @@ public class Tracker {
     }
 
     public boolean needsReminder() {
-        long minutesSinceLastDrink = Duration.between(user.getLastWaterTaken(), Instant.now()).toMinutes();
-        return minutesSinceLastDrink >= 180 && !hasMetGoal();
+        LocalTime lastWatertakenTime = user.getLastWaterTaken();
+        Duration hasntTakenWaterSince = Duration.between(lastWatertakenTime, LocalTime.now());
+        return hasntTakenWaterSince.toMinutes() > 120;
     }
 }
