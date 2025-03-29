@@ -14,7 +14,7 @@ public class UserInteraction {
     private static final String waterStatsFile = "src/Txt_Files/water_stats.txt";
     private static final String feedbackFile = "src/Txt_Files/feedback.txt";
 
-    FileManager fileManager = new FileManager(waterStatsFile, feedbackFile);
+    FileManager fileManager = new FileManager();
     public void userDashboard(){
         String name = MyGeneralUtils.takeInput("Enter your name : ");
         String email = MyGeneralUtils.takeInput("Enter your email : ");
@@ -33,7 +33,7 @@ public class UserInteraction {
             
             // tracker.trackWater();
             Reminder reminder = new Reminder();
-            Tracker tracker = new Tracker(waterStatsFile,feedbackFile,user);
+            Tracker tracker = new Tracker(waterStatsFile,user);
             reminder.startReminders(tracker.needsReminder());
             MyGeneralUtils.sleep();
 
@@ -52,10 +52,10 @@ public class UserInteraction {
         double dailygoal = MyGeneralUtils.takeValidDoubleInput("Enter daily goal : ");
 
         User user = new User(name, email, MyGeneralUtils.formatStringToTime(wakeTime), MyGeneralUtils.formatStringToTime(sleepTime), dailygoal, 0.0, MyGeneralUtils.formatStringToTime(wakeTime));
-        fileManager.addUserStats(user);
+        fileManager.addUserStats(waterStatsFile, user);
 
         Reminder reminder = new Reminder();
-        Tracker tracker = new Tracker(waterStatsFile,feedbackFile,user);
+        Tracker tracker = new Tracker(waterStatsFile,user);
         // tracker.trackWater();
         reminder.startReminders(tracker.needsReminder());
     }
