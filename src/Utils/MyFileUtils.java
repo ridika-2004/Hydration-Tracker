@@ -12,6 +12,7 @@ public class MyFileUtils {
     public static final int waterGoalIndex = 5;
     public static final int currentTakeIndex = 6;
     public static final int lastWaterTakenIndex = 7;
+    public static final int feedbackIndex = 1;
 
     public static void saveInFile(String filepath, String line){
         try (FileWriter writer = new FileWriter(filepath, true)){

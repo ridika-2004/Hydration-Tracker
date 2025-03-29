@@ -15,14 +15,14 @@ public class Feedback {
 
     public void givefeedback(){
         String feedback = MyGeneralUtils.takeInput("Write feedback (hit enter to stop) : ");
-        fileManager.addUserFeedback(user, feedback);
+        fileManager.addUserFeedback(user, feedback, feedbackFile);
     }
 
     public void viewMyFeedbacks(){
-        //
+        fileManager.viewUserFeedback(feedbackFile, user);
     }
 
     public void viewAllFeedbacks(){
-        //
+        fileManager.viewAllFeedback(feedbackFile);
     }
 }

@@ -27,7 +27,32 @@ public class FileManager {
 
     }
 
-    public void addUserFeedback(User user, String feedback){
+    public void addUserFeedback(User user, String feedback, String feedbackfile){
         String data = String.join("|", user.getEmail(),feedback);
+        MyFileUtils.saveInFile(feedbackfile, data);
+    }
+
+    public void viewUserFeedback(String feebackfile, User user){
+        List<String> lines = MyFileUtils.readFromFile(feebackfile);
+        
+        if(lines.isEmpty()) return;
+
+        System.out.printf("%-20s%-20s\n", "Name", "Feedback");
+        for(String line : lines){
+            String[] parts = line.split("\\|");
+            if(parts[MyFileUtils.emailIndex].equalsIgnoreCase(user.getEmail())){
+                System.out.printf("%-20s%-20s\n", parts[MyFileUtils.emailIndex], parts[MyFileUtils.feedbackIndex]);
+            }
+        }
+    }
+
+    public void viewAllFeedback(String feebackfile){
+        List<String> lines = MyFileUtils.readFromFile(feebackfile);
+        if(lines.isEmpty()) return;
+        System.out.printf("%-20s%-20s\n", "Name", "Feedback");
+        for(String line : lines){
+            String[] parts = line.split("\\|");
+            System.out.printf("%-20s%-20s\n", parts[MyFileUtils.emailIndex], parts[MyFileUtils.feedbackIndex]);
+        }
     }
 }
