@@ -27,6 +27,9 @@ public class UserInteraction {
 
             User user = new User(name, email, waketime, sleeptime, dailygoal, currentIntake, lastwatertaken);
 
+            Tracker tracker = new Tracker(user);
+            tracker.trackWater();
+
             // System.out.println("Do you want to add water? ");
             // System.out.println(user.getLastWaterTaken());
         } else {
@@ -41,6 +44,9 @@ public class UserInteraction {
 
         User user = new User(name, email, TrackerUtils.formatStringToTime(wakeTime), TrackerUtils.formatStringToTime(sleepTime), dailygoal, 0.0, TrackerUtils.formatStringToTime(wakeTime));
         FileManager.addStats(filepath, user);
+
+        Tracker tracker = new Tracker(user);
+        tracker.trackWater();
     }
 
     private boolean userExists(String email){

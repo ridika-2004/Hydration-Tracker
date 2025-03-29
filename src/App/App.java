@@ -9,18 +9,43 @@ import Utils.TrackerUtils;
 public class App {
     public static void main(String[] args) {
         // new UserInteraction().userDashboard();
-        // System.out.println(
-        //     "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
-        //     "                                                            █                                      █\n" +
-        //     "                                                            █           CHOOSE YOUR ROLE           █\n" +
-        //     "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
-        //     "                                                            █                                      █\n" +
-        //     "                                                            █          [1] Regular User            █\n" +
-        //     "                                                            █          [2] Organizer               █\n" +
-        //     "                                                            █          [3] Exit                    █\n" +
-        //     "                                                            █                                      █\n" +
-        //     "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
-        //     "                                                            ");
+        // final String BLUE_TEXT = "\u001B[36m";  // Cyan text
+        // final String RESET = "\u001B[0m";      // Reset color
+
+        // // System.out.println(BLUE_TEXT + "Welcome to HydraTrack!" + RESET);
+
+        // String[] waveFrames = {
+        //     "██████████                 ",
+        //     " ████████                  ",
+        //     "  ██████                   ",
+        //     "   ████                    ",
+        //     "                           ",
+        //     "                           "
+        // };
+
+        // for (int i = 0; i < 20; i++) {  // Repeat the animation
+        //     System.out.print("\r" + waveFrames[i % waveFrames.length]); // Overwrite same line
+        //     try {
+        //         Thread.sleep(300);
+        //     } catch (InterruptedException e) {
+        //         // TODO Auto-generated catch block
+        //         e.printStackTrace();
+        //     } // Delay to make it animate
+        // }
+        // System.out.println();
+
+        System.out.println(
+            "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+            "                                                            █                                      █\n" +
+            "                                                            █           CHOOSE YOUR ROLE           █\n" +
+            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
+            "                                                            █                                      █\n" +
+            "                                                            █          [1] Regular User            █\n" +
+            "                                                            █          [2] Organizer               █\n" +
+            "                                                            █          [3] Exit                    █\n" +
+            "                                                            █                                      █\n" +
+            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
+            "                                                            ");
         
         
         
@@ -34,6 +59,11 @@ public class App {
         //                 "████████████████████████\r\n" + //
         //                 "");
 
-        System.out.println("▄\n");
+        // System.out.println("▄\n");
+
+        // ██████████              
+        //  ████████    
+        //   ██████             
+        //    ████
     }
 }

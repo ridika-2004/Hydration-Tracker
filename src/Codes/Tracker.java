@@ -10,6 +10,10 @@ public class Tracker {
         this.user = user;
     }
 
+    public void trackWater(){
+        //
+    }
+
     public void addWater(double amount, LocalTime time) {
         user.addWater(amount, time);
         System.out.println("Added " + amount + "ml. Total intake: " + user.getCurrentIntake() + "ml.");
