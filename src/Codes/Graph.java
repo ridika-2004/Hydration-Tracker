@@ -15,9 +15,9 @@ public class Graph {
         for (int i = 0; i < filledBars; i++) {
             System.out.print("█");
         }
-        // ANSI escape code for dark blue
+
         String darkBlue = "\u001B[34m";
-        String reset = "\u001B[0m"; // Reset to default color
+        String reset = "\u001B[0m";
 
         for (int i = filledBars; i < totalBars; i++) {
             System.out.print(darkBlue + "▓" + reset);

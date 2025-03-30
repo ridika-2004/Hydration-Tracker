@@ -8,12 +8,14 @@ public class Tracker {
     private User user;
     private String waterstatsfile;
     private FileManager fileManager;
+    private PrintManager printManager;
     final int reminder_threshold_minute = 120;
 
     public Tracker(String waterstatsfile, User user) {
         this.waterstatsfile = waterstatsfile;
         this.user = user;
-        fileManager = new FileManager();
+        this.printManager = new PrintManager();
+        fileManager = new FileManager(printManager);
     }
 
     public void trackWater(){

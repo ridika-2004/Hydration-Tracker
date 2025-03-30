@@ -8,7 +8,7 @@ public enum UserDataIndex {
     WATER_GOAL(4),
     CURRENT_TAKE(5),
     LAST_WATER_TAKEN(6),
-    FEEDBACK(1); // Used in feedback-related methods
+    FEEDBACK(1);
 
     private final int index;
 

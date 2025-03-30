@@ -6,11 +6,13 @@ public class Feedback {
     private final String feedbackFile;
     private User user;
     private FileManager fileManager;
+    private PrintManager printManager;
 
     public Feedback(String feedbackFile, User user){
         this.feedbackFile = feedbackFile;
         this.user = user;
-        fileManager = new FileManager();
+        this.printManager = new PrintManager();
+        fileManager = new FileManager(printManager);
     }
 
     public void givefeedback(){

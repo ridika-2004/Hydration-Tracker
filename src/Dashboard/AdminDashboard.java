@@ -1,6 +1,9 @@
 package Dashboard;
 
+import java.security.Principal;
+
 import Codes.FileManager;
+import Codes.PrintManager;
 import Utils.MyGeneralUtils;
 
 public class AdminDashboard {
@@ -15,7 +18,8 @@ public class AdminDashboard {
     }
     public void dashbaord(){
         
-        FileManager fileManager = new FileManager();
+        PrintManager printManager = new PrintManager();
+        FileManager fileManager = new FileManager(printManager);
         while (true) {
             displayOptions();
             String choice = MyGeneralUtils.takeInput("Enter your choice : ");
