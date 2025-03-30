@@ -7,7 +7,7 @@ import Utils.*;
 
 public class FileManager {
 
-    public final int userNameIndex = 0;
+    public final int nameIndex = 0;
     public final int dateIndex = 1;
     public final int wakeTimeIndex = 2;
     public final int sleepTimeIndex = 3;
@@ -30,10 +30,18 @@ public class FileManager {
         addUserStats(waterStatsFilepath, user);
     }
     public void readUserStats(String waterStatsFilepath, User user) {
-        // System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "Name", "Date", "Water Goal (ml)", "Water Intake (ml)", "Status");
-
+        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "Name", "Date", "Water Goal (ml)", 
+                                "Water Intake (ml)", "Status");
         List<String> lines = MyFileUtils.readFromFile(waterStatsFilepath);
-
+        for(String line : lines){
+            String[] parts = line.split("\\|");
+            String status = "Goal not met";
+            double watergoal = Double.parseDouble(parts[waterGoalIndex]);
+            double intake = Double.parseDouble(parts[currentTakeIndex]);
+            if(intake>=watergoal) status = "Goal Fullfilled"; 
+            System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", parts[nameIndex], parts[dateIndex], 
+                                    parts[waterGoalIndex],parts[currentTakeIndex], status);
+        }
     }
 
     public void addUserFeedback(User user, String feedback, String feedbackfile){
@@ -43,14 +51,13 @@ public class FileManager {
 
     public void viewUserFeedback(String feebackfile, User user){
         List<String> lines = MyFileUtils.readFromFile(feebackfile);
-        
         if(lines.isEmpty()) return;
 
         System.out.printf("%-20s%-20s\n", "Name", "Feedback");
         for(String line : lines){
             String[] parts = line.split("\\|");
-            if(parts[userNameIndex].equalsIgnoreCase(user.getName())){
-                System.out.printf("%-20s%-20s\n", parts[userNameIndex], parts[feedbackIndex]);
+            if(parts[nameIndex].equalsIgnoreCase(user.getName())){
+                System.out.printf("%-20s%-20s\n", parts[nameIndex], parts[feedbackIndex]);
             }
         }
     }
@@ -61,7 +68,7 @@ public class FileManager {
         System.out.printf("%-20s%-20s\n", "Name", "Feedback");
         for(String line : lines){
             String[] parts = line.split("\\|");
-            System.out.printf("%-20s%-20s\n", parts[userNameIndex], parts[feedbackIndex]);
+            System.out.printf("%-20s%-20s\n", parts[nameIndex], parts[feedbackIndex]);
         }
     }
 
@@ -71,7 +78,7 @@ public class FileManager {
         System.out.printf("%-20s%-20s\n", "Name", "Date");
         for(String line : lines){
             String[] parts = line.split("\\|");
-            System.out.printf("%-20s%-20s\n", parts[userNameIndex], parts[dateIndex]);
+            System.out.printf("%-20s%-20s\n", parts[nameIndex], parts[dateIndex]);
         }
     }
 

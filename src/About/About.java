@@ -37,13 +37,12 @@ public class About {
         System.out.println("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         System.out.println("█ [5] Save and check stats                               █");
         System.out.println("█     - The app saves your stats (name, date,            █");
-        System.out.println("█       water goal, and intake) in a text file.          █");
-        System.out.println("█     - You can view your stats with the 'readStats'     █");
-        System.out.println("█       function.                                        █");
+        System.out.println("█       water goal, and intake) you've entered.          █");
+        System.out.println("█     - You can view your stats with also.               █");
         System.out.println("█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
 
         System.out.println("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
-        System.out.println("█ To exit the app, type 'exit'. Stay hydrated!           █");
+        System.out.println("█ To exit the app, type 'exit'.  Stay hydrated!          █");
         System.out.println("█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
     }
 }
