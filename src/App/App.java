@@ -18,24 +18,24 @@ public class App {
 
         // // System.out.println(BLUE_TEXT + "Welcome to HydraTrack!" + RESET);
 
-        // String[] waveFrames = {
-        //     "██████████                 ",
-        //     " ████████                  ",
-        //     "  ██████                   ",
-        //     "   ████                    ",
-        //     "                           ",
-        //     "                           "
-        // };
+        String[] waveFrames = {
+            "██████████████ ██████████████                 ",
+            " ████████████   ████████████               ",
+            "  ██████████     ██████████              ",
+            "   ████████       ████████             ",
+            "                           ",
+            "                           "
+        };
 
-        // for (int i = 0; i < 20; i++) {  // Repeat the animation
-        //     System.out.print("\r" + waveFrames[i % waveFrames.length]); // Overwrite same line
-        //     try {
-        //         Thread.sleep(300);
-        //     } catch (InterruptedException e) {
-        //         // TODO Auto-generated catch block
-        //         e.printStackTrace();
-        //     } // Delay to make it animate
-        // }
+        for (int i = 0; i < 20; i++) {  // Repeat the animation
+            System.out.print("\r" + waveFrames[i % waveFrames.length]); // Overwrite same line
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } // Delay to make it animate
+        }
         // System.out.println();
 
         // System.out.println(

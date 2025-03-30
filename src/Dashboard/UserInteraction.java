@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 import Codes.FileManager;
+import Codes.Graph;
 import Codes.Reminder;
 import Codes.Tracker;
 import Codes.User;
@@ -34,10 +35,13 @@ public class UserInteraction {
             // tracker.trackWater();
             Reminder reminder = new Reminder();
             Tracker tracker = new Tracker(waterStatsFile,user);
-            reminder.startReminders(tracker.needsReminder());
-            MyGeneralUtils.sleep();
+            Graph graph = new Graph(user);
+            //tracker.trackWater();
+            graph.generateWaterIntakeGraph();
+            // reminder.startReminders(tracker.needsReminder());
+            // MyGeneralUtils.sleep();
 
-            System.out.println("done");
+            // System.out.println("done");
 
             // System.out.println("Do you want to add water? ");
             // System.out.println(user.getLastWaterTaken());
