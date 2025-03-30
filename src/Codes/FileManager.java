@@ -1,6 +1,5 @@
 package Codes;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 import Utils.*;
@@ -27,8 +26,6 @@ public class FileManager {
         addUserStats(waterStatsFilepath, user);
     }
     public void readUserStats(String waterStatsFilepath, User user) {
-        System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "Name", "Date", "Water Goal (ml)", 
-                                "Water Intake (ml)", "Status");
         List<String> lines = MyFileUtils.readFromFile(waterStatsFilepath);
         if (lines.isEmpty()) return;
 

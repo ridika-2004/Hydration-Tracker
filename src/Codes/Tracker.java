@@ -19,14 +19,14 @@ public class Tracker {
     }
 
     public void trackWater(){
+        System.out.println(
+                "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+                "                                                            █             WATER DRINK              █\n" +
+                "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");        
         double watertakenamount = MyGeneralUtils.takeValidDoubleInput("Enter the amount you drank : ");
         user.addWater(watertakenamount, LocalTime.now());
         System.out.println("Added " + watertakenamount + "ml. Total intake: " + user.getCurrentIntake() + "ml.");
         fileManager.updateStats(waterstatsfile, user);
-    }
-
-    public boolean hasMetGoal() {
-        return user.getCurrentIntake() >= user.getWaterGoal();
     }
 
     public boolean needsReminder() {

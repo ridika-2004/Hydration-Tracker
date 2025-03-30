@@ -18,8 +18,7 @@ public class UserDashboard {
     double dailygoal, currentintake;
     
     public void dashboard(){
-
-        UserSession userSession = new UserSession(fileManager, printManager, waterStatsFile);
+        UserSession userSession = new UserSession(fileManager, waterStatsFile);
         user = userSession.startSession();
 
         Tracker tracker = new Tracker(waterStatsFile,user);
@@ -35,20 +34,16 @@ public class UserDashboard {
                     tracker.trackWater();
                     break;
                 case "2":
-                    PrintManager printManager = new PrintManager();
-                    new FileManager(printManager).readUserStats(waterStatsFile, user);
+                    fileManager.readUserStats(waterStatsFile, user);
                     break;
                 case "3":
                     new Graph(user).generateWaterIntakeGraph();
                     break;
                 case "4":
-                    new Feedback(waterStatsFile, user).givefeedback();
+                    new Feedback(feedbackFile, user).givefeedback();
                     break;            
                 case "5":
-                    System.out.println("[1] Display chart by age");
-                    System.out.println("[2] Display chart by weight");
-                    System.out.println("[3] Special conditions");
-
+                    printManager.displayChartOptions();
                     String displaychoice = MyGeneralUtils.takeInput("Enter your choice : ");
                     switch (displaychoice) {
                         case "1":

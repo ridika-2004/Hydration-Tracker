@@ -9,13 +9,12 @@ public class App {
         while (true) {
             System.out.println(
                 "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
-                "                                                            █           CHOOSE YOUR ROLE           █\n" +
+                "                                                            █               YOUR ROLE              █\n" +
                 "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
                 "                                                            █          [1] Regular User            █\n" +
                 "                                                            █          [2] Admin                   █\n" +
                 "                                                            █          [3] Exit                    █\n" +
-                "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
-                "                                                            ");
+                "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
             String choice = MyGeneralUtils.takeInput("Enter your choice : ");
             switch (choice) {
                 case "1":

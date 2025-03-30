@@ -1,21 +1,23 @@
 package Dashboard;
-
-import java.security.Principal;
-
-import Codes.FileManager;
-import Codes.PrintManager;
-import Utils.MyGeneralUtils;
+import Codes.*;
+import Utils.*;
 
 public class AdminDashboard {
 
     private static final String waterStatsFile = "src/Txt_Files/water_stats.txt";
     private static final String feedbackFile = "src/Txt_Files/feedback.txt";
 
-    private void displayOptions(){
-        System.out.println("[1] view all login");
-        System.out.println("[2] see feedbacks");
-        System.out.println("[3] exit");
-    }
+    private void displayOptions() {
+        System.out.println(
+            "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+            "                                                            █              ADMIN MENU              █\n" +
+            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
+            "                                                            █           [1] View all login         █\n" +
+            "                                                            █           [2] See feedbacks          █\n" +
+            "                                                            █           [3] Exit                   █\n" +
+            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
+    }    
+
     public void dashbaord(){
         
         PrintManager printManager = new PrintManager();

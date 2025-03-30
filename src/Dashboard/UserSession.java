@@ -6,17 +6,18 @@ import Utils.*;
 
 public class UserSession {
     private final FileManager fileManager;
-    private final PrintManager printManager;
     private final String waterStatsFile;
 
-    public UserSession(FileManager fileManager, PrintManager printManager, String waterStatsFile) {
+    public UserSession(FileManager fileManager, String waterStatsFile) {
         this.fileManager = fileManager;
-        this.printManager = printManager;
         this.waterStatsFile = waterStatsFile;
     }
 
     public User startSession() {
-        printManager.smallBoxDisplay("NAME");
+        System.out.println(
+            "\n                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+            "                                                            █                  NAME                █\n" +
+            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
         String username = MyGeneralUtils.takeInput("Enter name: ");
 
         System.out.println("Taking you to the dashboard...");
@@ -44,7 +45,10 @@ public class UserSession {
     }
 
     private User enterDetails(String username) {
-        printManager.smallBoxDisplay("DETAILS");
+        System.out.println(
+            "\n                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+            "                                                            █               DETAILS                █\n" +
+            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
         LocalTime wakeTime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeInput("Enter waking time: "));
         LocalTime sleepTime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeInput("Enter sleeping time: "));
         double dailyGoal = MyGeneralUtils.takeValidDoubleInput("Enter daily goal: ");
