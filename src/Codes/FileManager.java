@@ -65,6 +65,16 @@ public class FileManager {
         }
     }
 
+    public void viewAllLogin(String waterstatsfile){
+        List<String> lines = MyFileUtils.readFromFile(waterstatsfile);
+        if(lines.isEmpty()) return;
+        System.out.printf("%-20s%-20s\n", "Name", "Date");
+        for(String line : lines){
+            String[] parts = line.split("\\|");
+            System.out.printf("%-20s%-20s\n", parts[userNameIndex], parts[dateIndex]);
+        }
+    }
+
     public String userExistsInFile(String waterstatsfile, String name){
         String userresult = MyFileUtils.searchFromFile(waterstatsfile, name);
         if(userresult==null) return null;
