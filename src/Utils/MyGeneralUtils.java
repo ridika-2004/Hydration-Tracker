@@ -18,9 +18,18 @@ public class MyGeneralUtils {
         }
     }
 
-    public static void sleep(){
+    public static String takeUniqueInput(String filepath, String prompt) {
+        while (true) {
+            String input = takeInput(prompt);
+            String searchResult = MyFileUtils.searchFromFile(filepath, input);
+            if (searchResult == null) return input;
+            else System.out.println("This email already exists! Please try again.");
+        }
+    }
+
+    public static void sleep(long duration) {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(duration);
         } catch (InterruptedException e) {
             // Thread.currentThread().interrupt();
             // System.out.println("Sleep interrupted: " + e.getMessage());

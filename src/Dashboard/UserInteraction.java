@@ -63,34 +63,4 @@ public class UserInteraction {
         // tracker.trackWater();
         reminder.startReminders(tracker.needsReminder());
     }
-
-    private boolean userExists(String email){
-        String userresult = MyFileUtils.searchFromFile(waterStatsFile, email);
-        // System.out.println(userresult);
-
-        if(userresult==null){
-            return false;
-        }
-
-        String[] parts = userresult.split("\\|");
-        LocalDate userDate = MyGeneralUtils.formatStringToDate(parts[MyFileUtils.dateIndex]);
-        if(!userDate.equals(LocalDate.now())){
-            return false;
-        }
-        
-        LocalTime sleepTime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.sleepTimeIndex]);
-        if(sleepTime.isBefore(LocalTime.now())){
-            return false;
-        }
-
-        LocalTime wakeTime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.wakeTimeIndex]);
-        if(wakeTime.isAfter(LocalTime.now())){
-            return false;
-        }
-        else {
-            // System.out.println("ok");
-            return true;
-        }
-
-    }
 }

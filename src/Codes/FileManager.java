@@ -1,6 +1,7 @@
 package Codes;
 import java.io.*;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 import Utils.*;
@@ -54,5 +55,21 @@ public class FileManager {
             String[] parts = line.split("\\|");
             System.out.printf("%-20s%-20s\n", parts[MyFileUtils.emailIndex], parts[MyFileUtils.feedbackIndex]);
         }
+    }
+
+    public String userExists(String waterstatsfile, String email){
+        String userresult = MyFileUtils.searchFromFile(waterstatsfile, email);
+        if(userresult==null) return null;
+
+        String[] parts = userresult.split("\\|");
+        LocalDate userDate = MyGeneralUtils.formatStringToDate(parts[MyFileUtils.dateIndex]);
+        if(!userDate.equals(LocalDate.now())) return null;
+        
+        LocalTime sleepTime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.sleepTimeIndex]);
+        if(sleepTime.isBefore(LocalTime.now())) return null;
+
+        LocalTime wakeTime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.wakeTimeIndex]);
+        if(wakeTime.isAfter(LocalTime.now())) return null;
+        else return userresult;
     }
 }

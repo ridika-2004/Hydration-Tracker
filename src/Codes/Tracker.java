@@ -1,5 +1,6 @@
 package Codes;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 import Utils.*;
@@ -17,15 +18,7 @@ public class Tracker {
     }
 
     public void trackWater(){
-        System.out.println("1. add water");
-        System.out.println("2. give feedback");
-        System.out.println("3. see today's stats");
-        System.out.println("4. view all stats");
-        System.out.println("5. view water needs for people");
-        System.out.println("6. about this app");
-
         double watertakenamount = MyGeneralUtils.takeValidDoubleInput("Enter the amount you drank : ");
-
         addWater(watertakenamount, LocalTime.now());
     }
 
