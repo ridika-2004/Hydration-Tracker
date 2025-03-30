@@ -11,7 +11,7 @@ import Utils.MyGeneralUtils;
 
 public class UserDashboard {
 
-    public void displayOptions(){
+    private void displayOptions(){
         System.out.println("[1] Add water ");
         System.out.println("[2] Your history ");
         System.out.println("[3] Current stats ");
@@ -20,7 +20,7 @@ public class UserDashboard {
         System.out.println("[6] Exit");
     }
     
-    public void dashbaord(User user, String waterstatsfile, String feedbackfile){
+    public void dashboard(User user, String waterstatsfile, String feedbackfile){
 
         Tracker tracker = new Tracker(waterstatsfile,user);
         Reminder reminder = new Reminder(tracker);

@@ -43,7 +43,7 @@ public class UserInitializer {
 
         fileManager.addUserStats(waterStatsFile, user);
 
-        userDashboard.dashbaord(user,waterStatsFile,feedbackFile);
+        userDashboard.dashboard(user,waterStatsFile,feedbackFile);
     }
 
     private void extractDetails(String name, String details){
@@ -57,6 +57,6 @@ public class UserInitializer {
 
         user = new User(name, waketime, sleeptime, dailygoal, currentintake, lastwatertaken);
 
-        userDashboard.dashbaord(user,waterStatsFile,feedbackFile);
+        userDashboard.dashboard(user,waterStatsFile,feedbackFile);
     }
 }
