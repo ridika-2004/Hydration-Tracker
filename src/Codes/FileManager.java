@@ -9,7 +9,7 @@ import Utils.*;
 public class FileManager {
 
     public void addUserStats(String waterStatsFilepath, User user) {
-        String data = String.join("|", user.getName(),user.getEmail(),MyGeneralUtils.formatDateToString(LocalDate.now()),
+        String data = String.join("|", user.getName(),MyGeneralUtils.formatDateToString(LocalDate.now()),
                     MyGeneralUtils.formatTimeToString(user.getWakeTime()),MyGeneralUtils.formatTimeToString(user.getSleepTime()),
                     String.format("%.2f",user.getWaterGoal()),String.format("%.2f",user.getCurrentIntake()),
                     MyGeneralUtils.formatTimeToString(user.getLastWaterTaken()));
@@ -17,7 +17,7 @@ public class FileManager {
     }
 
     public void updateStats(String waterStatsFilepath, User user){
-        String userline = MyFileUtils.searchFromFile(waterStatsFilepath, user.getEmail());
+        String userline = MyFileUtils.searchFromFile(waterStatsFilepath, user.getName());
         MyFileUtils.deleteLineFromFile(waterStatsFilepath, userline);
         addUserStats(waterStatsFilepath, user);
     }
@@ -29,7 +29,7 @@ public class FileManager {
     }
 
     public void addUserFeedback(User user, String feedback, String feedbackfile){
-        String data = String.join("|", user.getEmail(),feedback);
+        String data = String.join("|", user.getName(),feedback);
         MyFileUtils.saveInFile(feedbackfile, data);
     }
 
@@ -41,8 +41,8 @@ public class FileManager {
         System.out.printf("%-20s%-20s\n", "Name", "Feedback");
         for(String line : lines){
             String[] parts = line.split("\\|");
-            if(parts[MyFileUtils.emailIndex].equalsIgnoreCase(user.getEmail())){
-                System.out.printf("%-20s%-20s\n", parts[MyFileUtils.emailIndex], parts[MyFileUtils.feedbackIndex]);
+            if(parts[MyFileUtils.userNameIndex].equalsIgnoreCase(user.getName())){
+                System.out.printf("%-20s%-20s\n", parts[MyFileUtils.userNameIndex], parts[MyFileUtils.feedbackIndex]);
             }
         }
     }
@@ -53,12 +53,12 @@ public class FileManager {
         System.out.printf("%-20s%-20s\n", "Name", "Feedback");
         for(String line : lines){
             String[] parts = line.split("\\|");
-            System.out.printf("%-20s%-20s\n", parts[MyFileUtils.emailIndex], parts[MyFileUtils.feedbackIndex]);
+            System.out.printf("%-20s%-20s\n", parts[MyFileUtils.userNameIndex], parts[MyFileUtils.feedbackIndex]);
         }
     }
 
-    public String userExists(String waterstatsfile, String email){
-        String userresult = MyFileUtils.searchFromFile(waterstatsfile, email);
+    public String userExists(String waterstatsfile, String name){
+        String userresult = MyFileUtils.searchFromFile(waterstatsfile, name);
         if(userresult==null) return null;
 
         String[] parts = userresult.split("\\|");

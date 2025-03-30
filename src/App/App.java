@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 import About.About;
 import Codes.Tracker;
-import Dashboard.UserInteraction;
 import Utils.*;
 
 public class App {

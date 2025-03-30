@@ -2,13 +2,12 @@ package Codes;
 import java.time.*;
 
 public class User {
-    private String name, email;
+    private String name;
     private LocalTime wakeTime, sleepTime, lastWaterTaken;
     private double waterGoal, currentIntake;
 
-    public User(String name, String email, LocalTime wakeTime, LocalTime sleepTime, double waterGoal, double currentIntake, LocalTime lastwatertakentime) {
+    public User(String name, LocalTime wakeTime, LocalTime sleepTime, double waterGoal, double currentIntake, LocalTime lastwatertakentime) {
         this.name = name;
-        this.email = email;
         this.wakeTime = wakeTime;
         this.sleepTime = sleepTime;
         this.waterGoal = waterGoal;
@@ -17,10 +16,6 @@ public class User {
     }
     public String getName() {
         return name;
-    }
-
-    public String getEmail(){
-        return email;
     }
 
     public LocalTime getWakeTime() {

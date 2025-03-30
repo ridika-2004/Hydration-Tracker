@@ -11,7 +11,7 @@ public class UserDashboard {
     private FileManager fileManager = new FileManager();
     private User user;
 
-    String username, useremail;
+    String username;
     LocalTime sleeptime,waketime,lastwatertaken;
     double dailygoal, currentintake;
 
@@ -22,36 +22,33 @@ public class UserDashboard {
 
         username = MyGeneralUtils.takeInput("Enter name : ");
 
-        System.out.println("\n                                                            ╔═════════════════════════════════════╗");
-        System.out.println("                                                            ║           ENTER YOUR EMAIL          ║");
-        System.out.println("                                                            ╚═════════════════════════════════════╝");
-        useremail = MyGeneralUtils.takeUniqueInput(waterStatsFile, "Enter email : ");
         MyGeneralUtils.sleep(1000);
         System.out.println("Taking you to the dashbaord........");
         
         MyGeneralUtils.clearTerminal();
-        if(fileManager.userExists(waterStatsFile, useremail)==null) enterDetails();
-        else extractDetails(fileManager.userExists(waterStatsFile, useremail));
+        if(fileManager.userExists(waterStatsFile, username)==null) enterDetails();
+        else extractDetails(username, fileManager.userExists(waterStatsFile, username));
     }
 
     private void enterDetails(){
         waketime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeInput("Enter waking time : "));
         sleeptime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeInput("Enter sleeping time : "));
         dailygoal = MyGeneralUtils.takeValidDoubleInput("Enter daily goal : ");
-        user = new User(username, useremail, waketime, sleeptime, dailygoal, 0.0, waketime);
+        user = new User(username, waketime, sleeptime, dailygoal, 0.0, waketime);
 
         showOptions();
     }
 
-    private void extractDetails(String details){
+    private void extractDetails(String name, String details){
         String parts[] = details.split("\\|");
+
         waketime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.wakeTimeIndex]);
         sleeptime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.sleepTimeIndex]);
         dailygoal = Double.parseDouble(parts[MyFileUtils.waterGoalIndex]);
         currentintake = Double.parseDouble(parts[MyFileUtils.currentTakeIndex]);
         lastwatertaken = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.lastWaterTakenIndex]);
 
-        user = new User(details, details, waketime, sleeptime, dailygoal, currentintake, lastwatertaken);
+        user = new User(name, waketime, sleeptime, dailygoal, currentintake, lastwatertaken);
 
         showOptions();
     }

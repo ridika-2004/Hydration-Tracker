@@ -17,16 +17,6 @@ public class MyGeneralUtils {
             }
         }
     }
-
-    public static String takeUniqueInput(String filepath, String prompt) {
-        while (true) {
-            String input = takeInput(prompt);
-            String searchResult = MyFileUtils.searchFromFile(filepath, input);
-            if (searchResult == null) return input;
-            else System.out.println("This email already exists! Please try again.");
-        }
-    }
-
     public static void sleep(long duration) {
         try {
             Thread.sleep(duration);
