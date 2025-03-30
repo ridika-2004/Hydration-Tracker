@@ -32,7 +32,7 @@ public class FileManager {
         List<String> lines = MyFileUtils.readFromFile(waterStatsFilepath);
         if (lines.isEmpty()) return;
 
-        printManager.printUserStats(lines);
+        printManager.printUserStats(lines, user);
     }
 
     public void addUserFeedback(User user, String feedback, String feedbackfile){
@@ -59,21 +59,5 @@ public class FileManager {
         if(lines.isEmpty()) return;
         System.out.printf("%-20s%-20s\n", "Name", "Date");
         printManager.printLoginDetails(lines);
-    }
-
-    public String userExistsInFile(String waterstatsfile, String name){
-        String userresult = MyFileUtils.searchFromFile(waterstatsfile, name);
-        if(userresult==null) return null;
-
-        String[] parts = userresult.split("\\|");
-        LocalDate userDate = MyGeneralUtils.formatStringToDate(parts[UserDataIndex.DATE.getIndex()]);
-        if(!userDate.equals(LocalDate.now())) return null;
-        
-        LocalTime sleepTime = MyGeneralUtils.formatStringToTime(parts[UserDataIndex.SLEEP_TIME.getIndex()]);
-        if(sleepTime.isBefore(LocalTime.now())) return null;
-
-        LocalTime wakeTime = MyGeneralUtils.formatStringToTime(parts[UserDataIndex.WAKE_TIME.getIndex()]);
-        if(wakeTime.isAfter(LocalTime.now())) return null;
-        else return userresult;
     }
 }
