@@ -16,10 +16,7 @@ public class Feedback {
     public void givefeedback(){
         String feedback = MyGeneralUtils.takeInput("Write feedback (hit enter to stop) : ");
         fileManager.addUserFeedback(user, feedback, feedbackFile);
-    }
-
-    public void viewMyFeedbacks(){
-        fileManager.viewUserFeedback(feedbackFile, user);
+        System.out.println("Your feedback sent successfully!!!");
     }
 
     public void viewAllFeedbacks(){

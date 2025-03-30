@@ -1,6 +1,5 @@
 package Codes;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 import Utils.*;
@@ -19,12 +18,8 @@ public class Tracker {
 
     public void trackWater(){
         double watertakenamount = MyGeneralUtils.takeValidDoubleInput("Enter the amount you drank : ");
-        addWater(watertakenamount, LocalTime.now());
-    }
-
-    public void addWater(double amount, LocalTime time) {
-        user.addWater(amount, time);
-        System.out.println("Added " + amount + "ml. Total intake: " + user.getCurrentIntake() + "ml.");
+        user.addWater(watertakenamount, LocalTime.now());
+        System.out.println("Added " + watertakenamount + "ml. Total intake: " + user.getCurrentIntake() + "ml.");
         fileManager.updateStats(waterstatsfile, user);
     }
 

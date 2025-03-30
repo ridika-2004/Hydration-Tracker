@@ -10,7 +10,7 @@ public class UserInitializer {
     private static final String waterStatsFile = "src/Txt_Files/water_stats.txt";
     private static final String feedbackFile = "src/Txt_Files/feedback.txt";
     private FileManager fileManager = new FileManager();
-    private UserDashboard userDashboard;
+    private UserDashboard userDashboard = new UserDashboard();
     private User user;
 
     String username;
@@ -43,7 +43,7 @@ public class UserInitializer {
 
         fileManager.addUserStats(waterStatsFile, user);
 
-        userDashboard.dashbaord();
+        userDashboard.dashbaord(user,waterStatsFile,feedbackFile);
     }
 
     private void extractDetails(String name, String details){
@@ -57,6 +57,6 @@ public class UserInitializer {
 
         user = new User(name, waketime, sleeptime, dailygoal, currentintake, lastwatertaken);
 
-        userDashboard.dashbaord();
+        userDashboard.dashbaord(user,waterStatsFile,feedbackFile);
     }
 }

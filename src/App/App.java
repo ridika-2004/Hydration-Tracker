@@ -1,14 +1,12 @@
 package App;
 
-import java.time.LocalDate;
-
-import About.About;
-import Codes.Tracker;
 import Dashboard.UserDashboard;
-import Utils.*;
+import Dashboard.UserInitializer;
 
 public class App {
     public static void main(String[] args) {
+        UserInitializer userInitializer = new UserInitializer();
+        userInitializer.entercredentials();
         // System.exit(0);
         // final String BLUE_TEXT = "\u001B[36m";  // Cyan text
         // final String RESET = "\u001B[0m";      // Reset color

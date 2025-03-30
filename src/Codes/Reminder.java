@@ -7,20 +7,26 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
+import Utils.MyGeneralUtils;
+
 public class Reminder {
+    private Tracker tracker;
     private Timer reminderTimer;
 
-    public Reminder() {
+    public Reminder(Tracker tracker) {
+        this.tracker = tracker;
         this.reminderTimer = new Timer();
     }
 
-    public void startReminders(boolean needsReminder) {
+    public void startReminders() {
         reminderTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                if (needsReminder) {
-                    System.out.println("Reminder: Drink water!");
+                if (tracker.needsReminder()) {
+                    System.out.println("\nReminder : Drink water!");
                     playBeepSound();
+                    MyGeneralUtils.sleep(3000);
+                    // MyGeneralUtils.clearTerminal();
                 }
             }
         }, 0, 1 * 60 * 1000);
