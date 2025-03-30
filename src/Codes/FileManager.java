@@ -8,6 +8,15 @@ import Utils.*;
 
 public class FileManager {
 
+    public final int userNameIndex = 0;
+    public final int dateIndex = 1;
+    public final int wakeTimeIndex = 2;
+    public final int sleepTimeIndex = 3;
+    public final int waterGoalIndex = 4;
+    public final int currentTakeIndex = 5;
+    public final int lastWaterTakenIndex = 6;
+    public final int feedbackIndex = 1;
+
     public void addUserStats(String waterStatsFilepath, User user) {
         String data = String.join("|", user.getName(),MyGeneralUtils.formatDateToString(LocalDate.now()),
                     MyGeneralUtils.formatTimeToString(user.getWakeTime()),MyGeneralUtils.formatTimeToString(user.getSleepTime()),
@@ -41,8 +50,8 @@ public class FileManager {
         System.out.printf("%-20s%-20s\n", "Name", "Feedback");
         for(String line : lines){
             String[] parts = line.split("\\|");
-            if(parts[MyFileUtils.userNameIndex].equalsIgnoreCase(user.getName())){
-                System.out.printf("%-20s%-20s\n", parts[MyFileUtils.userNameIndex], parts[MyFileUtils.feedbackIndex]);
+            if(parts[userNameIndex].equalsIgnoreCase(user.getName())){
+                System.out.printf("%-20s%-20s\n", parts[userNameIndex], parts[feedbackIndex]);
             }
         }
     }
@@ -53,22 +62,22 @@ public class FileManager {
         System.out.printf("%-20s%-20s\n", "Name", "Feedback");
         for(String line : lines){
             String[] parts = line.split("\\|");
-            System.out.printf("%-20s%-20s\n", parts[MyFileUtils.userNameIndex], parts[MyFileUtils.feedbackIndex]);
+            System.out.printf("%-20s%-20s\n", parts[userNameIndex], parts[feedbackIndex]);
         }
     }
 
-    public String userExists(String waterstatsfile, String name){
+    public String userExistsInFile(String waterstatsfile, String name){
         String userresult = MyFileUtils.searchFromFile(waterstatsfile, name);
         if(userresult==null) return null;
 
         String[] parts = userresult.split("\\|");
-        LocalDate userDate = MyGeneralUtils.formatStringToDate(parts[MyFileUtils.dateIndex]);
+        LocalDate userDate = MyGeneralUtils.formatStringToDate(parts[dateIndex]);
         if(!userDate.equals(LocalDate.now())) return null;
         
-        LocalTime sleepTime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.sleepTimeIndex]);
+        LocalTime sleepTime = MyGeneralUtils.formatStringToTime(parts[sleepTimeIndex]);
         if(sleepTime.isBefore(LocalTime.now())) return null;
 
-        LocalTime wakeTime = MyGeneralUtils.formatStringToTime(parts[MyFileUtils.wakeTimeIndex]);
+        LocalTime wakeTime = MyGeneralUtils.formatStringToTime(parts[wakeTimeIndex]);
         if(wakeTime.isAfter(LocalTime.now())) return null;
         else return userresult;
     }

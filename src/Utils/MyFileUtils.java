@@ -4,16 +4,6 @@ import java.util.*;
 
 public class MyFileUtils {
 
-    public static final int userNameIndex = 0;
-    public static final int emailIndex = 1;
-    public static final int dateIndex = 2;
-    public static final int wakeTimeIndex = 3;
-    public static final int sleepTimeIndex = 4;
-    public static final int waterGoalIndex = 5;
-    public static final int currentTakeIndex = 6;
-    public static final int lastWaterTakenIndex = 7;
-    public static final int feedbackIndex = 1;
-
     public static void saveInFile(String filepath, String line){
         try (FileWriter writer = new FileWriter(filepath, true)){
             writer.write(line+"\n");

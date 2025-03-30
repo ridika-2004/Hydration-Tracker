@@ -4,13 +4,12 @@ import java.time.LocalDate;
 
 import About.About;
 import Codes.Tracker;
+import Dashboard.UserDashboard;
 import Utils.*;
 
 public class App {
     public static void main(String[] args) {
-        // About about = new About();
-        // about.printGuide();
-        // new UserInteraction().userDashboard();
+        new UserDashboard().entercredentials();
         // System.exit(0);
         // final String BLUE_TEXT = "\u001B[36m";  // Cyan text
         // final String RESET = "\u001B[0m";      // Reset color
