@@ -9,7 +9,8 @@ public class UserInitializer {
 
     private static final String waterStatsFile = "src/Txt_Files/water_stats.txt";
     private static final String feedbackFile = "src/Txt_Files/feedback.txt";
-    private FileManager fileManager = new FileManager();
+    PrintManager printManager = new PrintManager();
+    private FileManager fileManager = new FileManager(printManager);
     private UserDashboard userDashboard = new UserDashboard();
     private User user;
 
@@ -49,11 +50,11 @@ public class UserInitializer {
     private void extractDetails(String name, String details){
         String parts[] = details.split("\\|");
 
-        waketime = MyGeneralUtils.formatStringToTime(parts[fileManager.wakeTimeIndex]);
-        sleeptime = MyGeneralUtils.formatStringToTime(parts[fileManager.sleepTimeIndex]);
-        dailygoal = Double.parseDouble(parts[fileManager.waterGoalIndex]);
-        currentintake = Double.parseDouble(parts[fileManager.currentTakeIndex]);
-        lastwatertaken = MyGeneralUtils.formatStringToTime(parts[fileManager.lastWaterTakenIndex]);
+        waketime = MyGeneralUtils.formatStringToTime(parts[UserDataIndex.WAKE_TIME.getIndex()]);
+        sleeptime = MyGeneralUtils.formatStringToTime(parts[UserDataIndex.SLEEP_TIME.getIndex()]);
+        dailygoal = Double.parseDouble(parts[UserDataIndex.WATER_GOAL.getIndex()]);
+        currentintake = Double.parseDouble(parts[UserDataIndex.CURRENT_TAKE.getIndex()]);
+        lastwatertaken = MyGeneralUtils.formatStringToTime(parts[UserDataIndex.LAST_WATER_TAKEN.getIndex()]);
 
         user = new User(name, waketime, sleeptime, dailygoal, currentintake, lastwatertaken);
 
