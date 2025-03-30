@@ -44,7 +44,24 @@ public class UserDashboard {
                 new Feedback(feedbackfile, user).givefeedback();
                 break;            
             case "5":
-                
+                System.out.println("[1] Display chart by age");
+                System.out.println("[2] Display chart by weight");
+                System.out.println("[3] Special conditions");
+
+                String displaychoice = MyGeneralUtils.takeInput("Enter your choice : ");
+                switch (displaychoice) {
+                    case "1":
+                        new WaterIntakeChart().displayAgeBasedChart();
+                        break;
+                    case "2":
+                        new WaterIntakeChart().displayWeightBasedChart();
+                        break;
+                    case "3":
+                        new WaterIntakeChart().displaySpecialConditionChart();
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case "6":
                 System.out.println("Exiting.......");
