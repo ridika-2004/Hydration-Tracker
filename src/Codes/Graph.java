@@ -4,6 +4,9 @@ public class Graph {
     private User user;
     private final int percentage_multiplier = 100;
 
+    String darkBlue = "\u001B[34m";
+    String reset = "\u001B[0m";
+
     public Graph(User user){
         this.user = user;
     }
@@ -16,9 +19,6 @@ public class Graph {
         for (int i = 0; i < filledBars; i++) {
             System.out.print("█");
         }
-
-        String darkBlue = "\u001B[34m";
-        String reset = "\u001B[0m";
 
         for (int i = filledBars; i < totalBars; i++) {
             System.out.print(darkBlue + "▓" + reset);

@@ -17,7 +17,7 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
 
 <br><br>
 
-$$\textnormal{\color{black}A simple and effective hydration tracking system to help you stay hydrated daily!}$$
+$$\textnormal{\color{black}A simple and effective hydration tracking system to help you stay hydrated daily. Track your water intake, set goals, and get reminders!}$$
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b5d15079-d0bc-446b-9f54-f68310464190" alt="App Screenshot" width=400>

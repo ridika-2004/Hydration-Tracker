@@ -6,9 +6,11 @@ public class App {
     public static void main(String[] args) {
         MyGeneralUtils.clearTerminal();
 
+        System.out.println("\n\n                                                                   WELCOME TO HYDRATION TRACKER\n");
+
         while (true) {
             System.out.println(
-                "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
+                "\n                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
                 "                                                            █               YOUR ROLE              █\n" +
                 "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
                 "                                                            █          [1] Regular User            █\n" +
