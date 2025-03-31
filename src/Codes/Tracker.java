@@ -26,6 +26,9 @@ public class Tracker {
         double watertakenamount = MyGeneralUtils.takeValidDoubleInput("Enter the amount you drank : ");
         user.addWater(watertakenamount, LocalTime.now());
         System.out.println("Added " + watertakenamount + "ml. Total intake: " + user.getCurrentIntake() + "ml.");
+        if(user.getCurrentIntake()>=user.getWaterGoal()) {
+            System.out.println("CONGRATULATIONS!!YOU FULLFILLED YOUR GOAL!!!");
+        }
         fileManager.updateStats(waterstatsfile, user);
     }
 

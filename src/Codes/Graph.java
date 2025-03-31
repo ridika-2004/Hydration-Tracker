@@ -2,6 +2,7 @@ package Codes;
 
 public class Graph {
     private User user;
+    private final int percentage_multiplier = 100;
 
     public Graph(User user){
         this.user = user;
@@ -23,6 +24,8 @@ public class Graph {
             System.out.print(darkBlue + "▓" + reset);
         }
 
-        System.out.println("] " + String.format("%.2f", (user.getCurrentIntake() / user.getWaterGoal()) * 100) + "%");
+        System.out.println("] " + String.format("%.2f", (user.getCurrentIntake() / user.getWaterGoal()) * percentage_multiplier) + "%");
+
+        if(user.getCurrentIntake()>=user.getWaterGoal()) System.out.println("GOAL FULLFILLED");
     }
 }
