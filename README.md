@@ -66,11 +66,9 @@ $$\textnormal{\color{black}A simple and effective hydration tracking system to h
 <h1 align="left"> 
   $\textnormal{\color{blue}{CREDITS}}$ 
 </h1>
-
-<br><br>
 <ul align="left">
-<p>$$\textnormal{\color{black}Developed using Java and object-oriented principles.}$$</p>
-<p>$$\textnormal{\color{black}Designed with a simple and clean console interface.}$$</p>
+<p align= "left">$$\textnormal{\color{black}Developed using Java and object-oriented principles.}$$</p>
+<p align= "left">$$\textnormal{\color{black}Designed with a simple and clean console interface.}$$</p>
 </ul>
 
 <br><br>
