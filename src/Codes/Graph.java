@@ -1,11 +1,9 @@
 package Codes;
+import Utils.*;
 
 public class Graph {
     private User user;
     private final int percentage_multiplier = 100;
-
-    String darkBlue = "\u001B[34m";
-    String reset = "\u001B[0m";
 
     public Graph(User user){
         this.user = user;
@@ -21,11 +19,11 @@ public class Graph {
         }
 
         for (int i = filledBars; i < totalBars; i++) {
-            System.out.print(darkBlue + "▓" + reset);
+            System.out.print(Color.DARK_BLUE.getCode() + "▓" + Color.RESET.getCode());
         }
 
         System.out.println("] " + String.format("%.2f", (user.getCurrentIntake() / user.getWaterGoal()) * percentage_multiplier) + "%");
 
-        if(user.getCurrentIntake()>=user.getWaterGoal()) System.out.println("GOAL FULLFILLED");
+        if(user.getCurrentIntake()>=user.getWaterGoal()) System.out.println(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"GOAL FULLFILLED"+Color.RESET.getCode());
     }
 }

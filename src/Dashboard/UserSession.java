@@ -18,9 +18,9 @@ public class UserSession {
             "\n                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
             "                                                            █                  NAME                █\n" +
             "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
-        String username = MyGeneralUtils.takeInput("Enter name: ");
+        String username = MyGeneralUtils.takeInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter name: "+Color.RESET.getCode());
 
-        System.out.println("Taking you to the dashboard...");
+        System.out.println(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Taking you to the dashboard..."+Color.RESET.getCode());
         MyGeneralUtils.sleep(2000);
         MyGeneralUtils.clearTerminal();
 
@@ -49,9 +49,9 @@ public class UserSession {
             "\n                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
             "                                                            █               DETAILS                █\n" +
             "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
-        LocalTime wakeTime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeInput("Enter waking time: "));
-        LocalTime sleepTime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeInput("Enter sleeping time: "));
-        double dailyGoal = MyGeneralUtils.takeValidDoubleInput("Enter daily goal: ");
+        LocalTime wakeTime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeTimeInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter waking time: "+Color.RESET.getCode()));
+        LocalTime sleepTime = MyGeneralUtils.formatStringToTime(MyGeneralUtils.takeTimeInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter sleeping time: "+Color.RESET.getCode()));
+        double dailyGoal = MyGeneralUtils.takeValidDoubleInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter daily goal: "+Color.RESET.getCode());
 
         User newUser = new User(username, wakeTime, sleepTime, dailyGoal, 0.0, wakeTime);
         fileManager.addUserStats(waterStatsFile, newUser);

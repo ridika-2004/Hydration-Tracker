@@ -1,6 +1,5 @@
 package Dashboard;
-
-import java.time.LocalTime;
+import java.time.*;
 import About.*;
 import Codes.*;
 import Utils.*;
@@ -28,7 +27,7 @@ public class UserDashboard {
             reminder.startReminders();
 
             printManager.userOptionsDisplay();
-            String choice = MyGeneralUtils.takeInput("Enter your choice : ");
+            String choice = MyGeneralUtils.takeInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter your choice : "+Color.RESET.getCode());
             switch (choice) {
                 case "1":
                     tracker.trackWater();
@@ -44,7 +43,7 @@ public class UserDashboard {
                     break;            
                 case "5":
                     printManager.displayChartOptions();
-                    String displaychoice = MyGeneralUtils.takeInput("Enter your choice : ");
+                    String displaychoice = MyGeneralUtils.takeInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter your choice : "+Color.RESET.getCode());
                     switch (displaychoice) {
                         case "1":
                             new WaterIntakeChart().displayAgeBasedChart();
@@ -60,11 +59,11 @@ public class UserDashboard {
                     }
                     break;
                 case "6":
-                    System.out.println("Exiting.......");
+                    System.out.println(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Exiting......."+Color.RESET.getCode());
                     MyGeneralUtils.sleep(1000);
                     System.exit(0);
                 default:
-                    System.out.println("Invalid choice!!!");
+                    System.out.println(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Invalid choice!!!"+Color.RESET.getCode());
                     break;
             }
         }

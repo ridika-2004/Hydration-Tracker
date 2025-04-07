@@ -6,25 +6,14 @@ public class AdminDashboard {
 
     private static final String waterStatsFile = "src/Txt_Files/water_stats.txt";
     private static final String feedbackFile = "src/Txt_Files/feedback.txt";
-
-    private void displayOptions() {
-        System.out.println(
-            "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
-            "                                                            █              ADMIN MENU              █\n" +
-            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
-            "                                                            █           [1] View all login         █\n" +
-            "                                                            █           [2] See feedbacks          █\n" +
-            "                                                            █           [3] Exit                   █\n" +
-            "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
-    }    
-
-    public void dashbaord(){
+    PrintManager printManager = new PrintManager();
+        public void dashbaord(){
         
         PrintManager printManager = new PrintManager();
         FileManager fileManager = new FileManager(printManager);
         while (true) {
-            displayOptions();
-            String choice = MyGeneralUtils.takeInput("Enter your choice : ");
+            printManager.adminOptionDisplay();
+            String choice = MyGeneralUtils.takeInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter your choice : "+Color.RESET.getCode());
 
             switch (choice) {
                 case "1":
@@ -37,7 +26,7 @@ public class AdminDashboard {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Invalid choice.");
+                    System.out.println(Color.RED.getCode()+Color.BOLD.getCode()+"Invalid choice."+Color.RESET.getCode());
                     break;
             }
         }

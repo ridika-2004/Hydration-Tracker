@@ -1,7 +1,5 @@
 package Codes;
-import java.time.Duration;
-import java.time.LocalTime;
-
+import java.time.*;
 import Utils.*;
 
 public class Tracker {
@@ -23,11 +21,11 @@ public class Tracker {
                 "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
                 "                                                            █             WATER DRINK              █\n" +
                 "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");        
-        double watertakenamount = MyGeneralUtils.takeValidDoubleInput("Enter the amount you drank : ");
+        double watertakenamount = MyGeneralUtils.takeValidDoubleInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Enter the amount you drank : "+Color.RESET.getCode());
         user.addWater(watertakenamount, LocalTime.now());
         System.out.println("Added " + watertakenamount + "ml. Total intake: " + user.getCurrentIntake() + "ml.");
         if(user.getCurrentIntake()>=user.getWaterGoal()) {
-            System.out.println("CONGRATULATIONS!!YOU FULLFILLED YOUR GOAL!!!");
+            System.out.println(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"CONGRATULATIONS!!YOU FULLFILLED YOUR GOAL!!!"+Color.RESET.getCode());
         }
         fileManager.updateStats(waterstatsfile, user);
     }

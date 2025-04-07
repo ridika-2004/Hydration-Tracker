@@ -1,13 +1,8 @@
 package Codes;
-import java.io.File;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-
-import Utils.MyGeneralUtils;
+import java.io.*;
+import java.util.*;
+import javax.sound.sampled.*;
+import Utils.*;
 
 public class Reminder {
     private Tracker tracker;
@@ -23,7 +18,7 @@ public class Reminder {
             @Override
             public void run() {
                 if (tracker.needsReminder()) {
-                    System.out.println("\nReminder : Drink water!");
+                    System.out.println(Color.RED.getCode()+Color.BOLD.getCode()+"\nReminder : Drink water!"+Color.RESET.getCode());
                     playBeepSound();
                     MyGeneralUtils.sleep(3000);
                     // MyGeneralUtils.clearTerminal();

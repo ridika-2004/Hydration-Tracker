@@ -3,6 +3,7 @@ import java.io.*;
 import java.time.*;
 import java.time.format.*;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class MyGeneralUtils {
     
@@ -14,6 +15,20 @@ public class MyGeneralUtils {
             String input = scanner.nextLine().trim();
             if(!input.isEmpty()){
                 return input;
+            } else {
+                System.out.println(Color.RED.getCode()+Color.BOLD.getCode()+"Input cannot be empty"+Color.RESET.getCode());
+            }
+        }
+    }
+
+    public static String takeTimeInput(String prompt){
+        String timeRegex = "^([01]\\d|2[0-3]):([0-5]\\d)$";
+        while (true) {
+            String input = takeInput(prompt);
+            if(Pattern.matches(timeRegex, input)) {
+                return input;
+            } else {
+                System.out.println(Color.RED.getCode()+Color.BOLD.getCode()+"Invalid time format"+Color.RESET.getCode());
             }
         }
     }
@@ -22,7 +37,7 @@ public class MyGeneralUtils {
             Thread.sleep(duration);
         } catch (InterruptedException e) {
             // Thread.currentThread().interrupt();
-            // System.out.println("Sleep interrupted: " + e.getMessage());
+            // System.out.println(e.getMessage());
         }
     }
 
@@ -57,7 +72,7 @@ public class MyGeneralUtils {
                 double input = Double.parseDouble(scanner.nextLine().trim());
                 return input;
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a valid number.");
+                System.out.println(Color.RED.getCode()+Color.BOLD.getCode()+"Invalid input. Please enter a valid number."+Color.RESET.getCode());
             }
         }
     }

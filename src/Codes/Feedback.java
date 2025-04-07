@@ -1,5 +1,6 @@
 package Codes;
 
+import Utils.Color;
 import Utils.MyGeneralUtils;
 
 public class Feedback {
@@ -20,9 +21,9 @@ public class Feedback {
                 "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
                 "                                                            █               FEEDBACK               █\n" +
                 "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
-        String feedback = MyGeneralUtils.takeInput("Write feedback (hit enter to stop) : ");
+        String feedback = MyGeneralUtils.takeInput(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Write feedback (hit enter to stop) : "+Color.RESET.getCode());
         fileManager.addUserFeedback(user, feedback, feedbackFile);
-        System.out.println("Your feedback sent successfully!!!");
+        System.out.println(Color.MAGENTA.getCode()+Color.BOLD.getCode()+"Your feedback sent successfully!!!"+Color.RESET.getCode());
     }
 
     public void viewAllFeedbacks(){
