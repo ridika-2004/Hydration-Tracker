@@ -9,7 +9,7 @@ public class Graph{
         this.user = user;
     }
     public void generateWaterIntakeGraph() {
-        int totalBars = 20;
+        int totalBars = 50;
         int filledBars = (int) ((user.getCurrentIntake() / user.getWaterGoal()) * totalBars);
         filledBars = Math.min(filledBars, totalBars);
 

@@ -62,8 +62,8 @@ public class PrintManager implements IPrintManager {
             "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
             "                                                            █              ADMIN MENU              █\n" +
             "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n" +
-            "                                                            █           [1] View all login         █\n" +
-            "                                                            █           [2] See feedbacks          █\n" +
+            "                                                            █           [1] All login              █\n" +
+            "                                                            █           [2] All feedbacks          █\n" +
             "                                                            █           [3] Exit                   █\n" +
             "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
     }
@@ -78,7 +78,7 @@ public class PrintManager implements IPrintManager {
             "                                                            █          [2] Your history            █\n" +
             "                                                            █          [3] Current stats           █\n" +
             "                                                            █          [4] Give feedback           █\n" +
-            "                                                            █          [5] View water need chart   █\n" +
+            "                                                            █          [5] Water taking chart      █\n" +
             "                                                            █          [6] Exit                    █\n" +
             "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
     }
