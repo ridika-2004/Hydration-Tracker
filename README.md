@@ -53,7 +53,7 @@ $$\textnormal{\color{black}A simple and effective hydration system to track wate
 
 <ul align="right">
   <p align= "right">$$\textnormal{\color{black}Role-based login without authentication.}$$</p>
-  <p align= "right">$$\textnormal{\color{black}Users can set and monitor progress bar along with their history.}$$</p>
+  <p align= "right">$$\textnormal{\color{black}Users can set daily water goal and monitor progress bar along with their history.}$$</p>
   <p align= "right">$$\textnormal{\color{black}Receive hydration reminder and send feedback to the admin.}$$</p>
   <p align= "right">$$\textnormal{\color{black}Admins can view feedbacks and login details.}$$</p>
 </ul>
