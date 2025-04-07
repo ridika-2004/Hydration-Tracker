@@ -1,9 +1,8 @@
 <h1 align="center" font-style="bold">
-  $\Huge\textnormal{\color{blue}Hydration}\textnormal{\color{red}Tracker}$
-  <img src="https://github.com/user-attachments/assets/4e9f7102-0b3d-449d-a2c5-f414b9205fff" alt="Hydration Tracker" width="70" style="vertical-align: middle;">
+  $\Huge\textnormal{\color{blue}Hydration Tracker}$
 </h1>
 
-$$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
+$$\textnormal{\color{green}(I heard you don't drink enough water!)}$$
 
 <br><br>
 
@@ -17,13 +16,11 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
 
 <br><br>
 
-$$\textnormal{\color{black}A simple and effective hydration tracking system to help you stay hydrated daily. Track your water intake, set goals, and get reminders!}$$
+$$\textnormal{\color{black}A simple and effective hydration system to track water intake, set goals, and get reminders!}$$
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b5d15079-d0bc-446b-9f54-f68310464190" alt="App Screenshot" width=400>
+  <img src="https://github.com/user-attachments/assets/f4709f88-11a4-4663-8ec7-eea8aa6d5a6c" alt="App Screenshot" width=400>
 </p>
-
-
 <br><br>
 
 <h1 align="center"> 
@@ -53,26 +50,29 @@ $$\textnormal{\color{black}A simple and effective hydration tracking system to h
 <h1 align="right"> 
   $\textnormal{\color{green}{FEATURES}}$ 
 </h1>
- 
+
+<img src="https://github.com/user-attachments/assets/ef2c2486-3d9c-46b2-a062-b559e5093dbc" alt="License" width="100" align="left" style="vertical-align: bottom;" />
+
 
 <ul align="right">
+  <p align= "right">$$\textnormal{\color{black}Role based login without any authentication.}$$</p>
   <p align= "right">$$\textnormal{\color{black}Set and track daily water intake goals.}$$</p>
   <p align= "right">$$\textnormal{\color{black}Receive hydration reminders based on your schedule.}$$</p>
-  <p align= "right">$$\textnormal{\color{black}Visualize your progress with graphs and stats.}$$</p>
+  <p align= "right">$$\textnormal{\color{black}Give Feedbacks.}$$</p>
+  <p align= "right">$$\textnormal{\color{black}Visualize your status and progress with graphs and stats.}$$</p>
 </ul>
-
-<br><br>
 
 <h1 align="left"> 
   $\textnormal{\color{blue}{CREDITS}}$ 
 </h1>
+<img src="https://github.com/user-attachments/assets/36c7f3c1-e28c-4178-a014-5243fffff830" alt="License" width="100" align="right" style="vertical-align: bottom;" />
+
 <ul align="left">
 <p align= "left">$$\textnormal{\color{black}Developed using Java and object-oriented principles.}$$</p>
 <p align= "left">$$\textnormal{\color{black}Designed with a simple and clean console interface.}$$</p>
+  <p align= "left">$$\textnormal{\color{black}File management system for storing data.}$$</p>
 </ul>
 
-<br><br>
-
 <h1 align="right"> $\textnormal{\color{red}{LICENSE}}$ </h1>
-<img src="https://github.com/user-attachments/assets/acbcca7e-5e05-4337-97b5-1b49b93615bb" alt="License" width="150" align="left" style="vertical-align: bottom;" />
+<img src="https://github.com/user-attachments/assets/b3c81ca8-8d38-41a9-9937-0bcd62348c52" alt="License" width="100" align="left" style="vertical-align: bottom;" />
 <p align="right">${This\ project\ is\ licensed\ under\ the \ {\color{red}MIT}}\ License$</p>
