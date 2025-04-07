@@ -53,10 +53,9 @@ $$\textnormal{\color{black}A simple and effective hydration system to track wate
 
 <ul align="right">
   <p align= "right">$$\textnormal{\color{black}Role-based login without authentication.}$$</p>
-  <p align= "right">$$\textnormal{\color{black}Set and monitor daily water intake goals.}$$</p>
-  <p align= "right">$$\textnormal{\color{black}Receive hydration reminders based on your schedule.}$$</p>
-  <p align= "right">$$\textnormal{\color{black}Submit feedback easily.}$$</p>
-  <p align= "right">$$\textnormal{\color{black}Visualize progress with charts and statistics.}$$</p>
+  <p align= "right">$$\textnormal{\color{black}Users can set and monitor progress bar along with their history.}$$</p>
+  <p align= "right">$$\textnormal{\color{black}Receive hydration reminder and send feedback to the admin.}$$</p>
+  <p align= "right">$$\textnormal{\color{black}Admins can view feedbacks and login details.}$$</p>
 </ul>
 
 <h1 align="left"> 
