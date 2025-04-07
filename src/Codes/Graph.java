@@ -1,7 +1,7 @@
 package Codes;
 import Utils.*;
 
-public class Graph {
+public class Graph{
     private User user;
     private final int percentage_multiplier = 100;
 

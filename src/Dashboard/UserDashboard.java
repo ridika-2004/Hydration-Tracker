@@ -2,14 +2,15 @@ package Dashboard;
 import java.time.*;
 import About.*;
 import Codes.*;
+import Interfaces.*;
 import Utils.*;
 
 public class UserDashboard {
 
     String waterStatsFile = "src/Txt_Files/water_stats.txt";
     String feedbackFile = "src/Txt_Files/feedback.txt";
-    PrintManager printManager = new PrintManager();
-    FileManager fileManager = new FileManager(printManager);
+    IPrintManager printManager = new PrintManager();
+    IFileManager fileManager = new FileManager(printManager);
     User user;
 
     String username;
@@ -20,7 +21,7 @@ public class UserDashboard {
         UserSession userSession = new UserSession(fileManager, waterStatsFile);
         user = userSession.startSession();
 
-        Tracker tracker = new Tracker(waterStatsFile,user);
+        ITracker tracker = new Tracker(waterStatsFile,user);
         Reminder reminder = new Reminder(tracker);
 
         while (true) {

@@ -1,5 +1,6 @@
 package Codes;
 
+import Interfaces.IPrintManager;
 import Utils.Color;
 import Utils.MyGeneralUtils;
 
@@ -7,7 +8,7 @@ public class Feedback {
     private final String feedbackFile;
     private User user;
     private FileManager fileManager;
-    private PrintManager printManager;
+    private IPrintManager printManager;
 
     public Feedback(String feedbackFile, User user){
         this.feedbackFile = feedbackFile;

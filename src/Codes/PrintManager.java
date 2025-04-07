@@ -1,7 +1,10 @@
 package Codes;
 import java.util.*;
 
-public class PrintManager {
+import Interfaces.IPrintManager;
+
+public class PrintManager implements IPrintManager {
+    @Override
     public void printFeedbackTable(List<String> lines, String filterUser) {
         System.out.println("                                          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         System.out.printf("                                          █ %-20s█ %-60s █\n", "Name", "Feedback");
@@ -20,6 +23,7 @@ public class PrintManager {
     }
 
 
+    @Override
     public void printUserStats(List<String> lines, User user) {
         System.out.println("\n                    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         System.out.printf("                    █ %-20s█ %-20s█ %-20s█ %-20s█ %-20s █\n", "Name", "Date", "Water Goal", "Current Intake", "Status");
@@ -39,6 +43,7 @@ public class PrintManager {
     }
     
 
+    @Override
     public void printLoginDetails(List<String> lines){              
         System.out.println("                                                        ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
         System.out.printf("                                                        █ %-20s█ %-20s █\n", "Name", "Date");
@@ -51,6 +56,7 @@ public class PrintManager {
                                                                                       
     }
 
+    @Override
     public void adminOptionDisplay(){
         System.out.println(
             "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
@@ -62,6 +68,7 @@ public class PrintManager {
             "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
     }
 
+    @Override
     public void userOptionsDisplay(){
         System.out.println(
             "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
@@ -76,6 +83,7 @@ public class PrintManager {
             "                                                            █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n");
     }
 
+    @Override
     public void displayChartOptions() {
         System.out.println(
             "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +

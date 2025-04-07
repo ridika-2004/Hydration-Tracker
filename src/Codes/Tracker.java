@@ -1,8 +1,10 @@
 package Codes;
 import java.time.*;
+
+import Interfaces.ITracker;
 import Utils.*;
 
-public class Tracker {
+public class Tracker implements ITracker{
     private User user;
     private String waterstatsfile;
     private FileManager fileManager;
@@ -16,6 +18,7 @@ public class Tracker {
         fileManager = new FileManager(printManager);
     }
 
+    @Override
     public void trackWater(){
         System.out.println(
                 "                                                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n" +
@@ -30,6 +33,7 @@ public class Tracker {
         fileManager.updateStats(waterstatsfile, user);
     }
 
+    @Override
     public boolean needsReminder() {
         LocalTime lastWatertakenTime = user.getLastWaterTaken();
         Duration hasntTakenWaterSince = Duration.between(lastWatertakenTime, LocalTime.now());

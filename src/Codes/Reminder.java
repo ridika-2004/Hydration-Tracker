@@ -2,17 +2,17 @@ package Codes;
 import java.io.*;
 import java.util.*;
 import javax.sound.sampled.*;
+import Interfaces.ITracker;
 import Utils.*;
 
 public class Reminder {
-    private Tracker tracker;
+    private ITracker tracker;
     private Timer reminderTimer;
 
-    public Reminder(Tracker tracker) {
+    public Reminder(ITracker tracker) {
         this.tracker = tracker;
         this.reminderTimer = new Timer();
     }
-
     public void startReminders() {
         reminderTimer.scheduleAtFixedRate(new TimerTask() {
             @Override

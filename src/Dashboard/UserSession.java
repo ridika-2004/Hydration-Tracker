@@ -1,14 +1,14 @@
 package Dashboard;
-
+import Interfaces.*;
 import java.time.*;
 import Codes.*;
 import Utils.*;
 
 public class UserSession {
-    private final FileManager fileManager;
-    private final String waterStatsFile;
+    private IFileManager fileManager;
+    private String waterStatsFile;
 
-    public UserSession(FileManager fileManager, String waterStatsFile) {
+    public UserSession(IFileManager fileManager, String waterStatsFile) {
         this.fileManager = fileManager;
         this.waterStatsFile = waterStatsFile;
     }
