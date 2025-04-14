@@ -19,8 +19,6 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
   <img src="https://github.com/user-attachments/assets/f4709f88-11a4-4663-8ec7-eea8aa6d5a6c" alt="App Screenshot" width=250>
 </p>
 
----
-
 <details>
   <summary align="center">
     <h1 align="center">
@@ -45,8 +43,6 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
 
 </details>
 
----
-
 <details>
   <summary align="center">
     <h1>$\textnormal{\color{greenyellow}{FEATURES}}$</h1>
@@ -62,8 +58,6 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
 </ul>
 
 </details>
-
----
 
 <details>
   <summary align="center">
@@ -95,8 +89,6 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
   <p align="right">View progress charts and submit feedback.</p>
 </ul>
 </details>
-
----
 
 <h1 align="left"> $\textnormal{\color{red}{LICENSE}}$ </h1>
 <img src="https://github.com/user-attachments/assets/e3f311ef-1d75-4da0-bcb1-dca8fb7e59d4" alt="License" width="100" align="right" style="vertical-align: bottom;" />
