@@ -73,8 +73,6 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
 </ul>
 </details>
 
----
-
 <details>
   <summary align="center">
     <h1>$\textnormal{\color{cyan}{HOW\ TO\ USE}}$</h1>
