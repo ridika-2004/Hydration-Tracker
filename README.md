@@ -19,6 +19,58 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
   <img src="https://github.com/user-attachments/assets/f4709f88-11a4-4663-8ec7-eea8aa6d5a6c" alt="App Screenshot" width=250>
 </p>
 
+
+<details>
+  <summary align="center">
+    <h1 align="center">
+      $\textnormal{\color{gold}{FILE STRUCTURE}}$
+    </h1><br>
+  </summary>
+  
+```
+src
+├── About/
+│   ├── About.java
+│   └── WaterIntakeChart.java
+│
+├── Codes/       
+│   ├── Feedback.java
+│   ├── FileManager.java
+│   ├── Graph.java
+│   ├── PrintManager.java
+│   ├── Reminder.java
+│   ├── Tracker.java
+│   ├── User.java
+│   └── UserDataIndex.java
+│
+├── Dashboard/
+│   ├── AdminDashboard.java
+│   ├── UserDashboard.java
+│   └── UserSession.java
+│
+├── Interfaces/
+│   ├── IFileManager.java
+│   ├── IPrintManager.java
+│   └── ITracker.java
+│
+├── Utils/
+│   ├── Color.java
+│   ├── MyFileUtils.java
+│   └── MyGeneralUtils.java
+│
+├── Txt_Files/
+│   ├── feedback.txt
+│   └── water_stats.txt
+│
+├── Sound/
+│   └── reminder.wav
+│
+├── App/
+│   └── App.java
+```
+
+</details>
+
 <details>
   <summary align="center">
     <h1 align="center">
