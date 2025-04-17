@@ -107,6 +107,7 @@ src
   <p align= "right">Users can set water goal and see progress bar along with their history.</p>
   <p align= "right">Receive hydration reminder and send feedback to the admin.</p>
   <p align= "right">Admins can view feedbacks and login details.</p>
+  <p align= "right">Colored console.</p>
 </ul>
 
 </details>
@@ -137,6 +138,7 @@ src
   <p align="right">Set your hydration goal and track daily intake.</p>
   <p align="right">Receive reminder alerts during the day.</p>
   <p align="right">View progress charts and submit feedback.</p>
+  <p align="right">As admin view all logins and feedbacks</p>
 </ul>
 </details>
 
