@@ -13,7 +13,7 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
 
 <br>
 
-<p align="center">A simple and effective hydration system to track water intake, set goals, and get reminders!</p>
+<p align="center">$$\textnormal{A simple and effective hydration system to track water intake, set goals, and get reminders!}$$</p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f4709f88-11a4-4663-8ec7-eea8aa6d5a6c" alt="App Screenshot" width=250>
@@ -28,7 +28,7 @@ $$\textnormal{\color{red}(I heard you don't drink enough water!)}$$
   </summary>
   
 ```
-src
+src/
 ├── About/
 │   ├── About.java
 │   └── WaterIntakeChart.java
@@ -103,11 +103,11 @@ src
 <img src="https://github.com/user-attachments/assets/ef2c2486-3d9c-46b2-a062-b559e5093dbc" alt="License" width="100" align="left" style="vertical-align: bottom;" />
 
 <ul align="right">
-  <p align= "right">Role-based login without authentication.</p>
-  <p align= "right">Users can set water goal and see progress bar along with their history.</p>
-  <p align= "right">Receive hydration reminder and send feedback to the admin.</p>
-  <p align= "right">Admins can view feedbacks and login details.</p>
-  <p align= "right">Colored console.</p>
+  <p align= "right">$$\textnormal{Role-based login without authentication.}$$</p>
+  <p align= "right">$$\textnormal{Users can set water goal and see progress bar along with their history.}$$</p>
+  <p align= "right">$$\textnormal{Receive hydration reminder and send feedback to the admin.}$$</p>
+  <p align= "right">$$\textnormal{Admins can view feedbacks and login details.}$$</p>
+  <p align= "right">$$\textnormal{Colored console.}$$</p>
 </ul>
 
 </details>
@@ -119,10 +119,10 @@ src
 <img src="https://github.com/user-attachments/assets/8d118f8d-31d5-4f50-9b56-e7b196910cdf" width="100" align="right" style="vertical-align: bottom;" />
 
 <ul align="left">
-  <p align="left">Java (Object-Oriented Programming)</p>
-  <p align="left">Java I/O for file handling</p>
-  <p align="left">Plain Text files for data storage</p>
-  <p align="left">ASCII and Unicode characters for console UI</p>
+  <p align="left">$$\textnormal{Java (Object-Oriented Programming)}$$</p>
+  <p align="left">$$\textnormal{Java I/O for file handling}$$</p>
+  <p align="left">$$\textnormal{Plain Text files for data storage}$$</p>
+  <p align="left">$$\textnormal{ASCII and Unicode characters for console UI}$$</p>
 </ul>
 </details>
 
@@ -134,11 +134,11 @@ src
 
 
 <ul align="right">
-  <p align="right">Set your role as admin or user.</p>
-  <p align="right">Set your hydration goal and track daily intake.</p>
-  <p align="right">Receive reminder alerts during the day.</p>
-  <p align="right">View progress charts and submit feedback.</p>
-  <p align="right">As admin view all logins and feedbacks</p>
+  <p align="right">$$\textnormal{Set your role as admin or user.}$$</p>
+  <p align="right">$$\textnormal{Set your hydration goal and track daily intake.}$$</p>
+  <p align="right">$$\textnormal{Receive reminder alerts during the day.}$$</p>
+  <p align="right">$$\textnormal{View progress charts and submit feedback.}$$</p>
+  <p align="right">$$\textnormal{As admin view all logins and feedbacks.}$$</p>
 </ul>
 </details>
 
